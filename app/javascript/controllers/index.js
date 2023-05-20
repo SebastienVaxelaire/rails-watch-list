@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import MoviesListController from "./movies_list_controller"
 application.register("movies-list", MoviesListController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
