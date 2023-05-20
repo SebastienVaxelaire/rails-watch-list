@@ -5,7 +5,16 @@
     <a class="btn btn-flat" href="#">Create a movie list</a>
   </div>
 </div>
-
 <div class="container mt-5">
-<h2>My lists</h2>
-</div>
+<h2>My lists (<%= @lists.size %>)</h2>
+<div class="row">
+
+<% @lists.each do |list| %>
+  <div class="col-md-6 col-lg-4 mb-4">
+    <%= link_to list_path(list), class: "no-text-decoration" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.image_url %>)">
+        <%= list.name %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

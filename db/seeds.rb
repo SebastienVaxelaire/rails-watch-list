@@ -32,6 +32,7 @@ data['results'].each do |result|
     title: result['title'],
     overview: result['overview'],
     poster_url: "https://image.tmdb.org/t/p/w500/#{result['poster_path']}",
+    backdrop_url: "https://image.tmdb.org/t/p/w500/#{result['backdrop_path']}",
     rating: result['vote_average']
   )
 end

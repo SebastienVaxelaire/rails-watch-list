@@ -6,6 +6,8 @@ class ListsController < ApplicationController
   end
 
   def show
+    @review = Review.new
+    @reviews = Review.where(list: @list)
   end
 
   def new
@@ -28,6 +30,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :image_url)
   end
 end
