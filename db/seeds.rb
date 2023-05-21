@@ -10,12 +10,12 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
-puts "Delete database"
-Movie.destroy_all
+# puts "Delete database"
+# Movie.destroy_all
 
 puts "Creating database"
 
-url = URI("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1")
+url = URI("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=2")
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true

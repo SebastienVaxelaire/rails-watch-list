@@ -24,7 +24,7 @@
             <i class="fa-sharp fa-solid fa-quote-left"></i> <%= movie.bookmarks.first.comment %>
           </div>
           <div class="delete">
-            <%= link_to "Delete", bookmark_path(movie.bookmarks.first), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "delete" %>
+            <%= link_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, bookmark_path(movie.bookmarks.first), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "delete" %>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
 
 </div>
 
-<div class="container mt-5 border-top pt-5">
+<div class="container mt-5 border-top pt-5 mb-5">
 
   <div class="row">
 
