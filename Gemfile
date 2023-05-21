@@ -49,6 +49,7 @@ gem "sassc-rails"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
+gem "cloudinary", "~> 1.25.0"
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
