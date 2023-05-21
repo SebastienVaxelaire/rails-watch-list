@@ -10,7 +10,7 @@
 <div class="row">
   <% @list.movies.each do |movie| %>
     <div class="col-md-6 col-lg-4 mb-4">
-      <div class="movie-card">
+      <div class="movie-card" data-controller="aos" data-action="scroll->aos#observeScroll" data-aos="flip-left" data-aos-duration="2000">
         <%= image_tag movie.backdrop_url, alt: "Le Wagon", width: 200 %>
         <div class="movie-card-content">
           <div class="movie-card-title">
@@ -60,7 +60,7 @@
       <h5>Add your review about this list</h5>
       <%= simple_form_for([@list, @review]) do |f| %>
       <%= f.input :comment %>
-      <%= f.input :rating %>
+      <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience" %>
       <%= f.submit "Create Review", class: "btn btn-primary" %>
       <% end %>
     </div>
